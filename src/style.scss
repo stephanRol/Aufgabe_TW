@@ -208,7 +208,6 @@
         letter-spacing: 2.8px;
         color: #FFFFFF;
         text-transform: uppercase;
-        opacity: 1;
     }
 
     .contact-subtitle{
@@ -395,7 +394,300 @@
         background-color: #262626;
         color: var(--border);
         border-radius: 28px;
-    }   
+    } 
+    
+    //PAGE 2: Contact Form 
+    .contact-form{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .left-side-form{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 86px;
+            left: 198px;
+            
+            .back-button{
+                display: flex;
+                align-items: center;
+                width: 15px;
+                height: 24px;
+                color:#FFFFFF;
+                &:hover{
+                    cursor: pointer;
+                }
+
+                i{
+                    font-size: 24px; // !!!
+                }
+                p{
+                    width: 60px;
+                    height: 26px;
+                    text-align: center;
+                    margin-left: 13px;
+                    font-family: Roboto;
+                    font-size: 20px;
+                }
+            }
+
+            .form-title{
+                margin: 0;                
+                margin-top: 20px;
+                width: 359px;
+                height: 86px;
+                color: var(--hover-border);
+                text-align: left;
+                // font: normal normal medium 70px/80px Montserrat;
+                font: normal normal 600 70px/80px Montserrat;
+                letter-spacing: 2.8px;
+                text-transform: uppercase;
+            }
+
+            .form-person-chosen{
+                display: flex;
+                margin-top: 20px;
+                .form-person-img{
+                    width: 50px;
+                    height: 50px;
+                }
+                .grey-circle{
+                    width: 50px;
+                    height: 50px;
+                    background: var(--border) 0% 0% no-repeat padding-box;
+                    border-radius: 50%;
+                }
+                .form-person-name{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 25px;
+                    color: var(--hover-border);
+                    text-align: left;
+                    // font: normal normal medium 20px/33px Montserrat;
+                    font-size: 20px;
+                    font-family: Montserrat;
+                }
+            }
+
+            .form-question{
+                width: 338px;
+                height: 76px;
+                margin-top: 40px;
+                color: var(--hover-border);
+                text-align: left;
+                font: normal normal 600 20px/26px Montserrat;
+            }
+
+            .form-inputs{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+
+                .email{
+                    width: 372px;
+                    height: 39px;
+                    padding-left: 10px;
+                    border: 1px solid var(--border);
+                    background-color: #262626;
+                    font: normal normal normal 16px/28px Roboto;  
+                    color: #FFFFFF;                  
+                    &::placeholder{
+                        color: #FFFFFF;
+                        font-weight: 300;
+                    }
+                }
+
+                .full-name{
+                    width: 372px;
+                    height: 39px;
+                    margin: 10px 0;
+                    padding-left: 10px;
+                    border: 1px solid var(--border);
+                    background-color: #262626;
+                    font: normal normal normal 16px/28px Roboto;  
+                    color: #FFFFFF;                  
+                    &::placeholder{
+                        color: #FFFFFF;
+                        font-weight: 300;
+                    }
+                }
+
+                .textfield{
+                    width: 372px;
+                    height: 324px;
+                    padding: 8px 10px;
+                    border: 1px solid var(--border);
+                    background-color: #262626;
+                    font: normal normal normal 16px/28px Roboto;  
+                    color: #FFFFFF;                  
+                    &::placeholder{
+                        color: #FFFFFF;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        .right-side-form{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 352px;
+            left: 688px;
+
+            .text-frage{
+                width: 338px;
+                height: 24px;
+                color: var(--hover-border);
+                text-align: left;
+                font: normal normal 600 20px/26px Montserrat;
+            }
+            .buttons-call{
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                color:#FFFFFF;
+                font-family: var(--unnamed-font-family-montserrat);
+                .text-jup,
+                .text-nope{
+                    margin-left:5px ;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .button-yes-container{
+                    display: flex;
+                    align-items: center;
+                    opacity: 0.5;
+                    &.active{
+                        opacity: 1;
+                    }
+                    .button-yes{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        background: #4CAF50 0% 0% no-repeat padding-box;
+                        border-radius: 20%;
+                        i{
+                            color:#FFFFFF;
+                            font-size: 24px;
+                            font-weight: 400;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .button-no-container{
+                    display: flex;
+                    align-items: center;
+                    opacity: 0.5;
+                    &.active{
+                        opacity: 1;
+                    }
+                    .button-no{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        margin-left: 49px;
+                        background: #F44336 0% 0% no-repeat padding-box;
+                        border-radius: 20%;
+                        i{
+                            color:#FFFFFF;
+                            font-size: 24px;
+                            font-weight: 400;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .contact-number{
+                width: 371px;
+                height: 39px;
+                margin-top: 24px;
+                padding-left: 10px;
+                border: 1px solid var(--border);
+                background-color: #262626;
+                font: normal normal normal 16px/28px Roboto;  
+                color: #FFFFFF;                  
+                &::placeholder{
+                    color: #FFFFFF;
+                    font-weight: 300;
+                }  
+                // opacity: 0;      
+            }
+            .appointment-date{
+                width: 371px;
+                height: 39px;
+                margin-top: 10px;
+                padding-left: 10px;
+                border: 1px solid var(--border);
+                background-color: #262626;
+                font: normal normal normal 16px/28px Roboto;  
+                color: #FFFFFF;                  
+                &::placeholder{
+                    color: #FFFFFF;
+                    font-weight: 300;
+                } 
+            }
+            .text-1{
+                width: 371px;
+                height: 45px;
+                margin-top: 38px;
+                color: var(--hover-border);
+                text-align: left;
+                // font: normal normal normal 16px/26px Roboto;
+                font-family: Roboto;
+                font-family: 16px;
+                font-weight: 300;
+            }
+            .text-2{
+                width: 247px;
+                height: 19px;
+                margin-top: 20px;
+                color: var(--hover-border);
+                text-align: left;
+                font: normal normal 600 16px/26px Montserrat;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .send-form-button{
+                position: absolute;
+                top:314px;
+                width: 338px;
+                height: 54px;
+                margin-top: 20px;
+                background: var(--primary) 0% 0% no-repeat padding-box;
+                border-radius: 28px;
+                border: none;
+                color: var(--hover-border);
+                font: normal normal 20px/28px Roboto;
+                &:hover{
+                    cursor: pointer;
+                    background: #ff223c;
+                }
+            }
+            .text-3{
+                position: absolute;
+                top:382px;
+                width: 338px;
+                height: 86px;
+                margin-top: 14px;
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/18px var(--unnamed-font-family-roboto);
+                color: var(--hover-border);
+                text-align: left;
+            }
+        }
+    }
 }
 
 

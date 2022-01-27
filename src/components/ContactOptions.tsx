@@ -1,16 +1,26 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import person1 from '../assets/Person1/Person1.png'
 import person2 from '../assets/Person2/Person2.png'
 import person3 from '../assets/Person3/Person3.png'
 
-const ContactOptions = () => {
-    const cardRef = useRef();
-    const cardCircleRef = useRef();
+interface nextPageClick {
+    nextPageClick: () => void;
+    setPersonData: React.Dispatch<React.SetStateAction<Person>>;
+}
+
+export interface Person {
+    description: string;
+    image: string;
+    name: string;
+    position: string;
+    number: string;
+}
+
+const ContactOptions = ({ nextPageClick, setPersonData }: nextPageClick) => {
     const [selectedCard, setSelectedCard] = useState("");
 
     //Generates a unique ID
     const generateId = () => Math.random().toString(36).substr(2, 18);
-
 
     const persons = [
         {
@@ -43,12 +53,13 @@ const ContactOptions = () => {
         }
     ]
 
-    const handleClick = (e: React.MouseEvent) => {
-        setSelectedCard(e.currentTarget.id)
-    }
+    useEffect(() => {
+        setPersonData(persons[parseInt(selectedCard)])
+    }, [selectedCard]);
 
-    const nextPageClick = () => {
-        console.log("NEEEXT!");
+
+    const handleClick = (e: React.MouseEvent) => {
+        setSelectedCard(e.currentTarget.id);
     }
 
     return <>
@@ -58,7 +69,7 @@ const ContactOptions = () => {
             <div className="cards-container">
                 {persons.map((person, index) => {
                     return (
-                        <div className="card-container" key={index}>
+                        <div className="card-container" key={generateId()}>
 
                             <div className="card-circle"
                                 style={selectedCard === index.toString() ? {

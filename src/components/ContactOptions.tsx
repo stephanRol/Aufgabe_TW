@@ -104,12 +104,18 @@ const ContactOptions = ({ nextPageClick, setPersonData }: nextPageClick) => {
             </div>
         </div>
         {selectedCard !== "" ?
-            <button
-                className='contact-btn-weiter'
-                onClick={nextPageClick}
-            >Weiter</button>
+            <div className="btn-weiter-container">
+                <button
+                    className='contact-btn-weiter'
+                    onClick={nextPageClick}
+                >Weiter</button>
+            </div>
             :
-            <button className='contact-btn-weiter-disabled'>Weiter</button>}
+            <div className="btn-weiter-container-2">
+                <button className='contact-btn-weiter-disabled'>Weiter</button>
+            </div>
+        }
+
     </>;
 };
 

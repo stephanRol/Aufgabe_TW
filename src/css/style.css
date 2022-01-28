@@ -448,7 +448,18 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
+}
+@media screen and (max-width: 1890px) {
+  .contact-container .contact-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .contact-container .contact-form {
+    grid-template-columns: 100%;
+  }
 }
 .contact-container .contact-form .left-side-form {
   position: absolute;
@@ -456,6 +467,19 @@
   flex-direction: column;
   top: 86px;
   left: 198px;
+}
+@media screen and (max-width: 1890px) {
+  .contact-container .contact-form .left-side-form {
+    position: static;
+    margin-left: 20px;
+    margin-top: 86px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form {
+    margin-left: 0;
+    align-items: center;
+  }
 }
 .contact-container .contact-form .left-side-form .back-button {
   display: flex;
@@ -466,6 +490,11 @@
 }
 .contact-container .contact-form .left-side-form .back-button:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .back-button {
+    width: 100px;
+  }
 }
 .contact-container .contact-form .left-side-form .back-button i {
   font-size: 24px;
@@ -488,6 +517,17 @@
   font: normal normal 600 70px/80px Montserrat;
   letter-spacing: 2.8px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-title {
+    width: 100%;
+    text-align: center;
+  }
 }
 .contact-container .contact-form .left-side-form .form-person-chosen {
   display: flex;
@@ -512,6 +552,11 @@
   font-size: 20px;
   font-family: Montserrat;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-person-chosen .form-person-name {
+    font-size: 16px;
+  }
+}
 .contact-container .contact-form .left-side-form .form-question {
   width: 338px;
   height: 76px;
@@ -519,6 +564,12 @@
   color: var(--hover-border);
   text-align: left;
   font: normal normal 600 20px/26px Montserrat;
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-question {
+    width: 270px;
+    font-size: 18px;
+  }
 }
 .contact-container .contact-form .left-side-form .form-inputs {
   display: flex;
@@ -538,6 +589,11 @@
   color: #FFFFFF;
   font-weight: 300;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-inputs .email {
+    width: 270px;
+  }
+}
 .contact-container .contact-form .left-side-form .form-inputs .full-name {
   width: 372px;
   height: 39px;
@@ -552,6 +608,11 @@
   color: #FFFFFF;
   font-weight: 300;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-inputs .full-name {
+    width: 270px;
+  }
+}
 .contact-container .contact-form .left-side-form .form-inputs .textfield {
   width: 372px;
   height: 324px;
@@ -565,6 +626,11 @@
   color: #FFFFFF;
   font-weight: 300;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .left-side-form .form-inputs .textfield {
+    width: 270px;
+  }
+}
 .contact-container .contact-form .right-side-form {
   position: absolute;
   display: flex;
@@ -572,12 +638,46 @@
   top: 352px;
   left: 688px;
 }
+@media screen and (max-width: 1890px) {
+  .contact-container .contact-form .right-side-form {
+    position: static;
+    margin-left: 20px;
+    margin-top: 352px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .contact-container .contact-form .right-side-form {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .contact-container .contact-form .right-side-form {
+    margin-bottom: 800px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form {
+    align-items: center;
+    margin-left: 0;
+  }
+}
 .contact-container .contact-form .right-side-form .text-frage {
   width: 338px;
   height: 24px;
   color: var(--hover-border);
   text-align: left;
   font: normal normal 600 20px/26px Montserrat;
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .text-frage {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .text-frage {
+    width: 280px;
+    font-size: 18px;
+  }
 }
 .contact-container .contact-form .right-side-form .buttons-call {
   display: flex;
@@ -659,6 +759,11 @@
   color: #FFFFFF;
   font-weight: 300;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .contact-number {
+    width: 270px;
+  }
+}
 .contact-container .contact-form .right-side-form .appointment-date {
   width: 371px;
   height: 39px;
@@ -673,6 +778,11 @@
   color: #FFFFFF;
   font-weight: 300;
 }
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .appointment-date {
+    width: 270px;
+  }
+}
 .contact-container .contact-form .right-side-form .text-1 {
   width: 371px;
   height: 45px;
@@ -680,8 +790,14 @@
   color: var(--hover-border);
   text-align: left;
   font-family: Roboto;
-  font-family: 16px;
+  font-size: 16px;
   font-weight: 300;
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .text-1 {
+    width: 270px;
+    font-size: 15px;
+  }
 }
 .contact-container .contact-form .right-side-form .text-2 {
   width: 247px;
@@ -710,6 +826,23 @@
   cursor: pointer;
   background: #ff223c;
 }
+@media screen and (max-width: 1890px) {
+  .contact-container .contact-form .right-side-form .send-form-button {
+    top: 670px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .contact-container .contact-form .right-side-form .send-form-button {
+    position: static;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .send-form-button {
+    text-align: center;
+    width: 280px;
+  }
+}
 .contact-container .contact-form .right-side-form .text-3 {
   position: absolute;
   top: 382px;
@@ -719,6 +852,23 @@
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/18px var(--unnamed-font-family-roboto);
   color: var(--hover-border);
   text-align: left;
+}
+@media screen and (max-width: 1890px) {
+  .contact-container .contact-form .right-side-form .text-3 {
+    top: 740px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .contact-container .contact-form .right-side-form .text-3 {
+    position: static;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-container .contact-form .right-side-form .text-3 {
+    text-align: center;
+    width: 280px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
